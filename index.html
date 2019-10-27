@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Web site created using create-react-app"/>
+    <title>Pomodoro Clock</title>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>    
+    <link rel="stylesheet" href="./src/index.css">
+    <script src="https://kit.fontawesome.com/9e57f9e53b.js" crossorigin="anonymous"></script>
+  </head>
+
+<body>
+  <p>if you can't discipline small, you can't discipline big</p>
+
+<div>
+  <button class="btn change"> Switch Theme</button>
+</div>
+
+<div class="container">
+  <div class="timer-control">
+    <div class="timeLengthControl">
+      <div class="title">Break Time</div>
+      
+      <div class="board">
+      <button  id="break-increment" class="btn">
+        <i class="fas fa-chevron-up"></i>
+      </button>
+      <div id="break-length" class="level">5</div>
+      <button id="break-decrement" class="btn">
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      </div>
+      
+    </div>
+    
+    <div class="timeLengthControl">
+      <div class="title">Session Time</div>
+      
+      <div class="board">
+      <button  id="session-increment" class="btn">
+        <i class="fas fa-chevron-up"></i>
+      </button>
+      
+      <div id="session-length" class="level">25</div>
+      
+      <button id="session-decrement" class="btn">
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      </div>
+      
+    </div>
+  </div>
+  <div id="wrap-timer" class="light">
+  <div class="timer"></div>
+  </div>
+  <div clas="timer-board">
+    <button class="btn btn-success start">
+      <i class="fas fa-play"></i>
+    </button>
+    
+    <button class="btn btn-success stop">
+      <i class="fas fa-stop"></i>
+    </button>
+    
+    <button class="btn btn-success reset">
+      <i class="fas fa-redo"></i>
+    </button>
+  </div>
+</div>
+
+ <footer>
+    <div>design and pratice code by</div>
+    <h4>Jackie Hao Nguyen</h4>
+  </footer>
+</body>
+  
+  <script type="text/javascript" src="./src/index.js"></script>
+
+</html>

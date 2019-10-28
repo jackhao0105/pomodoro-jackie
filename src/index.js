@@ -27,14 +27,14 @@ let change = document.querySelector('.change');
 let clock = document.getElementById('clock');
 
 // Display Number Time Left
-function addLeadingZeores(time) {
+function addLeadingZeroes(time) {
   return time < 10 ? `0${time}` : time;
 }
 
 let secondZero = 0;
 let loop = 0;
 let timeLeft;
-let result = `${addLeadingZeores(sessionNum)}:${addLeadingZeores(secondZero)}`;
+let result = `${addLeadingZeroes(sessionNum)}:${addLeadingZeroes(secondZero)}`;
 timer.innerText = result;
 
 //** RESET BUTTON
@@ -44,7 +44,7 @@ function resetTimer() {
   sessionNum = 25;
   breakLength.textContent = 5;
   sessionLength.textContent = 25;
-  result = `${addLeadingZeores(sessionNum)}:${addLeadingZeores(secondZero)}`;
+  result = `${addLeadingZeroes(sessionNum)}:${addLeadingZeroes(secondZero)}`;
   timer.innerText = result;
   btnReset();
 }
@@ -62,7 +62,7 @@ function countDown(min, sec) {
       clearInterval(countInt);
       if (loop == 0) {
         timeLeft = breakNum;
-        result = `${addLeadingZeores(timeLeft)}:${addLeadingZeores(sec)}`;
+        result = `${addLeadingZeroes(timeLeft)}:${addLeadingZeroes(sec)}`;
         timer.style.backgroundColor = '#272e38';
         timer.style.color = '#cacaca';
         wrapTimer.style.backgroundColor = '#0f1620';
@@ -82,7 +82,7 @@ function countDown(min, sec) {
       sec = 59;
       min -= 1;
     }
-    result = `${addLeadingZeores(min)}:${addLeadingZeores(sec)}`;
+    result = `${addLeadingZeroes(min)}:${addLeadingZeroes(sec)}`;
     timer.innerText = result;
   }, 1000);
 }
@@ -104,7 +104,7 @@ function incrementBreak() {
 function incrementSession() {
   sessionNum += 5;
   sessionLength.textContent = sessionNum;
-  result = `${addLeadingZeores(sessionNum)}:${addLeadingZeores(secondZero)}`;
+  result = `${addLeadingZeroes(sessionNum)}:${addLeadingZeroes(secondZero)}`;
   timer.innerText = result;
 }
 
@@ -118,7 +118,7 @@ function decrementSession() {
   if (!sessionNum) return 0;
   sessionNum -= 5;
   sessionLength.textContent = sessionNum;
-  result = `${addLeadingZeores(sessionNum)}:${addLeadingZeores(secondZero)}`;
+  result = `${addLeadingZeroes(sessionNum)}:${addLeadingZeroes(secondZero)}`;
   timer.innerText = result;
 }
 
